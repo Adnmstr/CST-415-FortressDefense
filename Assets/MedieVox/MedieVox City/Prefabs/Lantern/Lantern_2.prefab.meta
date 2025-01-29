@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 1a45b7200ca188e438e54c2a7915e5c7
+timeCreated: 1518045891
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111229
+  packageName: MedieVox City FREE
+  packageVersion: 1.0
+  assetPath: Assets/MedieVox/MedieVox City/Prefabs/Lantern/Lantern_2.prefab
+  uploadId: 229201

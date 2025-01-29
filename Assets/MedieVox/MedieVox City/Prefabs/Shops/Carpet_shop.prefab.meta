@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: e971215efc85bda4189210e7576b0867
+timeCreated: 1518047577
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111229
+  packageName: MedieVox City FREE
+  packageVersion: 1.0
+  assetPath: Assets/MedieVox/MedieVox City/Prefabs/Shops/Carpet_shop.prefab
+  uploadId: 229201

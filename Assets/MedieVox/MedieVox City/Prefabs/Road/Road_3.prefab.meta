@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 0a6962369ccdc0641af88505eb7972b7
+timeCreated: 1518046345
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111229
+  packageName: MedieVox City FREE
+  packageVersion: 1.0
+  assetPath: Assets/MedieVox/MedieVox City/Prefabs/Road/Road_3.prefab
+  uploadId: 229201

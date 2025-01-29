@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 1e29653bb4c131c4683a7294eab4358a
+timeCreated: 1518045587
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111229
+  packageName: MedieVox City FREE
+  packageVersion: 1.0
+  assetPath: Assets/MedieVox/MedieVox City/Prefabs/Houses/House_Stone_2.prefab
+  uploadId: 229201

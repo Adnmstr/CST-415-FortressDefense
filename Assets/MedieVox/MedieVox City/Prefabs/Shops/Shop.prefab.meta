@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: ef5d230f876f0244baec96c97605acc6
+timeCreated: 1518047588
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111229
+  packageName: MedieVox City FREE
+  packageVersion: 1.0
+  assetPath: Assets/MedieVox/MedieVox City/Prefabs/Shops/Shop.prefab
+  uploadId: 229201

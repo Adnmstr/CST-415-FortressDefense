@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 6d86765ceb21f3a499a97c64ed498a28
+timeCreated: 1518045578
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111229
+  packageName: MedieVox City FREE
+  packageVersion: 1.0
+  assetPath: Assets/MedieVox/MedieVox City/Prefabs/Houses/House_Wood_1.prefab
+  uploadId: 229201
