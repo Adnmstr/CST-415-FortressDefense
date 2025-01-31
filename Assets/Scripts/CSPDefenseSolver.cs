@@ -44,7 +44,7 @@ public class CSPDefenseSolver : MonoBehaviour
                 GameObject enemy = Instantiate(enemyPrefab, new Vector3(-10, 0, 0), Quaternion.identity);
                 EnemyAI ai = enemy.GetComponent<EnemyAI>();
                 DefensivePosition targetPosition = defensivePositions.Find(p => p.positionName == target.Key);
-                ai.targetPosition = targetPosition.transform;
+                ai.targetPosition = targetPosition.positionTransform;
             }
 
             bool reallocationNeeded = CheckBreaches(wave);
