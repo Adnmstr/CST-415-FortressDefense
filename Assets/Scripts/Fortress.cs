@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class Fortress : MonoBehaviour
 {
-    int health = 3;
-    bool test = false;
+    public int health = 3;
+    public bool test = false;
+    public PositionType type;
 
     private void Start()
     {
@@ -20,3 +21,11 @@ public class Fortress : MonoBehaviour
         else { return; }
     }
 }
+
+/*public enum PositionType
+{
+    Wall,
+    Tower,
+    Gate
+}
+*/
