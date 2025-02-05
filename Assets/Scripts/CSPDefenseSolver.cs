@@ -8,6 +8,7 @@ public class CSPDefenseSolver : MonoBehaviour
     public List<DefensiveUnit> availableUnits;
     public List<DefensivePosition> defensivePositions;
     public List<EnemyWave> enemyWaves;
+    public GameObject positionObject; // added this so as to fix an error
 
     private Dictionary<DefensivePosition, DefensiveUnit> assignedUnits = new Dictionary<DefensivePosition, DefensiveUnit>();
 
