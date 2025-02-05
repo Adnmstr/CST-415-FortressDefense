@@ -1,5 +1,6 @@
 // Defines enemy waves that the CSP solver must handle.
 
+using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
