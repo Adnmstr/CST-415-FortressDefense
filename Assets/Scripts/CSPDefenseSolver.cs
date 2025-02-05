@@ -8,6 +8,7 @@ public class CSPDefenseSolver : MonoBehaviour
     public List<DefensiveUnit> availableUnits;
     public List<DefensivePosition> defensivePositions;
     public List<EnemyWave> enemyWaves;
+    public GameObject positionObject; // added this so as to fix an error
 
     private Dictionary<DefensivePosition, DefensiveUnit> assignedUnits = new Dictionary<DefensivePosition, DefensiveUnit>();
 
@@ -44,7 +45,8 @@ public class CSPDefenseSolver : MonoBehaviour
                 GameObject enemy = Instantiate(enemyPrefab, new Vector3(-10, 0, 0), Quaternion.identity);
                 EnemyAI ai = enemy.GetComponent<EnemyAI>();
                 DefensivePosition targetPosition = defensivePositions.Find(p => p.positionName == target.Key);
-                ai.targetPosition = targetPosition.transform;
+                // ai.targetPosition = targetPosition.transform;   As Defenceive position is not a MonoBehavior script,
+                                                                // this thows an error with the .transform
             }
 
             bool reallocationNeeded = CheckBreaches(wave);
