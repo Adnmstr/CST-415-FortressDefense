@@ -421,7 +421,31 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 233.09, y: 1.59, z: 151.65}
+=======
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+  m_LocalPosition: {x: 0, y: 1, z: -10}
+=======
+  m_LocalPosition: {x: 233.09, y: 13.15, z: 136.54}
+>>>>>>> Stashed changes
+=======
+  m_LocalPosition: {x: 233.09, y: 13.15, z: 136.54}
+>>>>>>> Stashed changes
+=======
+  m_LocalPosition: {x: 233.09, y: 13.15, z: 136.54}
+>>>>>>> Stashed changes
+=======
+  m_LocalPosition: {x: 233.09, y: 13.15, z: 136.54}
+>>>>>>> Stashed changes
+=======
+  m_LocalPosition: {x: 233.09, y: 13.15, z: 136.54}
+>>>>>>> Stashed changes
+>>>>>>> 8-create-catapult
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -798,6 +822,7 @@ Transform:
   - {fileID: 196626942}
   - {fileID: 752862812}
   - {fileID: 180052872}
+<<<<<<< HEAD
   - {fileID: 1521490521}
   - {fileID: 1815199815}
   - {fileID: 1060901061}
@@ -805,6 +830,32 @@ Transform:
   - {fileID: 752862817}
   - {fileID: 233343896}
   - {fileID: 1221491296}
+=======
+<<<<<<< Updated upstream
+  - {fileID: 233343896}
+  - {fileID: 408412904}
+=======
+  - {fileID: 1521490521}
+  - {fileID: 1815199815}
+  - {fileID: 1981219157}
+  - {fileID: 233343896}
+  - {fileID: 1263773254}
+  - {fileID: 408412904}
+  - {fileID: 752862817}
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+>>>>>>> 8-create-catapult
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &752862811
@@ -885,7 +936,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1476093008961687338, guid: 351f84b26ef80a94a9c8594ea51801ec, type: 3}
   m_PrefabInstance: {fileID: 752862811}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!65 &752862818
+=======
+<<<<<<< Updated upstream
+=======
+--- !u!65 &752862816
+>>>>>>> 8-create-catapult
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -906,6 +963,14 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.95057, y: 6.9514604, z: 2.4060311}
   m_Center: {x: 0, y: 3.4757302, z: 0}
+<<<<<<< HEAD
+=======
+--- !u!4 &752862817 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1476093008961687338, guid: 351f84b26ef80a94a9c8594ea51801ec, type: 3}
+  m_PrefabInstance: {fileID: 752862811}
+  m_PrefabAsset: {fileID: 0}
+>>>>>>> 8-create-catapult
 --- !u!1001 &771235584
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -914,6 +979,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< HEAD
+=======
+    - target: {fileID: 5436002233060752847, guid: 7778632bf67024a46b1f78e3c03c216e, type: 3}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5436002233060752847, guid: 7778632bf67024a46b1f78e3c03c216e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+>>>>>>> 8-create-catapult
     - target: {fileID: 6455139829038169830, guid: 7778632bf67024a46b1f78e3c03c216e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 229.38632
@@ -924,7 +1000,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6455139829038169830, guid: 7778632bf67024a46b1f78e3c03c216e, type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: 143.95
+=======
+      value: 155.98648
+>>>>>>> 8-create-catapult
       objectReference: {fileID: 0}
     - target: {fileID: 6455139829038169830, guid: 7778632bf67024a46b1f78e3c03c216e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -965,8 +1045,20 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
+<<<<<<< HEAD
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7778632bf67024a46b1f78e3c03c216e, type: 3}
+=======
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6455139829038195398, guid: 7778632bf67024a46b1f78e3c03c216e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1604178654}
+    - targetCorrespondingSourceObject: {fileID: 6455139829038195398, guid: 7778632bf67024a46b1f78e3c03c216e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1604178655}
+  m_SourcePrefab: {fileID: 100100000, guid: 7778632bf67024a46b1f78e3c03c216e, type: 3}
+>>>>>>> Stashed changes
+>>>>>>> 8-create-catapult
 --- !u!1001 &783359613
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1078,17 +1170,39 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &1026830846 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4127212570834266934, guid: e5ced279cdf62ab4caf1b1ea47b5ec1e, type: 3}
   m_PrefabInstance: {fileID: 3983624798892396462}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1026830852
+=======
+--- !u!1 &1034735438
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1034735440}
+  - component: {fileID: 1034735439}
+  m_Layer: 0
+  m_Name: CatapultSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1034735439
+>>>>>>> 8-create-catapult
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1026830846}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1102,6 +1216,33 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 512791915377227826, guid: 644e0838346a19c459373320e3603ce9, type: 3}
   m_PrefabInstance: {fileID: 180052871}
   m_PrefabAsset: {fileID: 0}
+=======
+  m_GameObject: {fileID: 1034735438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3008ef6a0e842904fa23fa6ece76d5c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  catapult: {fileID: 3285413397908997534, guid: 691dedf019210bd45bed4de5ecd2307c, type: 3}
+  structure1: {fileID: 1981219157}
+  structure2: {fileID: 1263773254}
+  structure3: {fileID: 408412904}
+--- !u!4 &1034735440
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034735438}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.18301266, y: -0.6830127, z: -0.18301266, w: 0.6830127}
+  m_LocalPosition: {x: 228.8036, y: 13.207333, z: 157.52275}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: -30}
+>>>>>>> 8-create-catapult
 --- !u!1001 &1111014800
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1257,16 +1398,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!4 &1221491296 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6203663942887043048, guid: 135392180c0d9e0488df0a533b16fad1, type: 3}
   m_PrefabInstance: {fileID: 2393774649570655265}
   m_PrefabAsset: {fileID: 0}
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> 8-create-catapult
 --- !u!1 &1255960888 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4900475800503880421, guid: 0241e293f88c9ba4683c927a85520fed, type: 3}
   m_PrefabInstance: {fileID: 541212190}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!136 &1255960896
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1303,6 +1450,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+=======
+--- !u!4 &1263773254 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 512791915377227826, guid: 644e0838346a19c459373320e3603ce9, type: 3}
+  m_PrefabInstance: {fileID: 180052871}
+  m_PrefabAsset: {fileID: 0}
+>>>>>>> 8-create-catapult
 --- !u!1001 &1521490520
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1311,10 +1465,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 710383430}
     m_Modifications:
+<<<<<<< HEAD
     - target: {fileID: 2584546397730952120, guid: e5ced279cdf62ab4caf1b1ea47b5ec1e, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+=======
+>>>>>>> 8-create-catapult
     - target: {fileID: 3606571156622684556, guid: e5ced279cdf62ab4caf1b1ea47b5ec1e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.421783
@@ -1369,6 +1526,48 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3606571156622684556, guid: e5ced279cdf62ab4caf1b1ea47b5ec1e, type: 3}
   m_PrefabInstance: {fileID: 1521490520}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+=======
+--- !u!1 &1604178636 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6455139829038195398, guid: 7778632bf67024a46b1f78e3c03c216e, type: 3}
+  m_PrefabInstance: {fileID: 771235584}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1604178654
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604178636}
+  m_Enabled: 0
+  m_Avatar: {fileID: 9000000, guid: 417a287abb2cab94889f1f1ddd91f928, type: 3}
+  m_Controller: {fileID: 9100000, guid: 5fbed9cae3571aa4f8273283e531893a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1604178655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604178636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd7c57012a26744599050d454d3b3a98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> 8-create-catapult
 --- !u!1001 &1815199814
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1417,10 +1616,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 6378462285708675490, guid: 135392180c0d9e0488df0a533b16fad1, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+=======
+>>>>>>> 8-create-catapult
     - target: {fileID: 6727260534646650194, guid: 135392180c0d9e0488df0a533b16fad1, type: 3}
       propertyPath: m_Name
       value: castle-tower 2
@@ -1435,6 +1637,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6203663942887043048, guid: 135392180c0d9e0488df0a533b16fad1, type: 3}
   m_PrefabInstance: {fileID: 1815199814}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+=======
+--- !u!4 &1981219157 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6203663942887043048, guid: 135392180c0d9e0488df0a533b16fad1, type: 3}
+  m_PrefabInstance: {fileID: 2393774649570655265}
+  m_PrefabAsset: {fileID: 0}
+>>>>>>> 8-create-catapult
 --- !u!1001 &2393774649570655265
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1483,10 +1693,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 6378462285708675490, guid: 135392180c0d9e0488df0a533b16fad1, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+=======
+>>>>>>> 8-create-catapult
     - target: {fileID: 6727260534646650194, guid: 135392180c0d9e0488df0a533b16fad1, type: 3}
       propertyPath: m_Name
       value: castle-tower
@@ -1504,10 +1717,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 710383430}
     m_Modifications:
+<<<<<<< HEAD
     - target: {fileID: 2584546397730952120, guid: e5ced279cdf62ab4caf1b1ea47b5ec1e, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+=======
+>>>>>>> 8-create-catapult
     - target: {fileID: 3606571156622684556, guid: e5ced279cdf62ab4caf1b1ea47b5ec1e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.195099
@@ -1552,6 +1768,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: castle-wall
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 4127212570834266934, guid: e5ced279cdf62ab4caf1b1ea47b5ec1e, type: 3}
       propertyPath: m_TagString
       value: Wall
@@ -1563,6 +1780,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4127212570834266934, guid: e5ced279cdf62ab4caf1b1ea47b5ec1e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1026830852}
+=======
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> 8-create-catapult
   m_SourcePrefab: {fileID: 100100000, guid: e5ced279cdf62ab4caf1b1ea47b5ec1e, type: 3}
 --- !u!1001 &5385623714379948091
 PrefabInstance:
@@ -1616,15 +1839,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 4486612698609986373, guid: fd21a85c0bf592640a0cf9a39544267b, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+=======
+>>>>>>> 8-create-catapult
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd21a85c0bf592640a0cf9a39544267b, type: 3}
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+>>>>>>> 8-create-catapult
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1635,5 +1865,26 @@ SceneRoots:
   - {fileID: 1111875377}
   - {fileID: 480203163}
   - {fileID: 710383430}
+<<<<<<< HEAD
   - {fileID: 541212190}
   - {fileID: 771235584}
+=======
+<<<<<<< Updated upstream
+=======
+  - {fileID: 541212190}
+  - {fileID: 771235584}
+  - {fileID: 1034735440}
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+>>>>>>> 8-create-catapult
