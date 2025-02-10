@@ -393,7 +393,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_LocalPosition: {x: 0, y: 1, z: -10}
+=======
+  m_LocalPosition: {x: 233.09, y: 13.15, z: 136.54}
+>>>>>>> Stashed changes
 =======
   m_LocalPosition: {x: 233.09, y: 13.15, z: 136.54}
 >>>>>>> Stashed changes
@@ -705,6 +709,9 @@ Transform:
   - {fileID: 1263773254}
   - {fileID: 408412904}
   - {fileID: 752862817}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1555,4 +1562,7 @@ SceneRoots:
   - {fileID: 541212190}
   - {fileID: 771235584}
   - {fileID: 1034735440}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
