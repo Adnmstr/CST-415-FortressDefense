@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro; // Required for TextMeshPro UI
-
+/*
 public class UIManager : MonoBehaviour
 {
     public TextMeshProUGUI assignmentText; // Assign in Unity Editor
@@ -29,6 +29,7 @@ public class UIManager : MonoBehaviour
 
     public void UpdateEnemyWaveUI()
     {
+        /
         string displayText = "<b>Enemy Attacks:</b>\n";
         foreach (var wave in cspSolver.enemyWaves)
         {
@@ -40,7 +41,9 @@ public class UIManager : MonoBehaviour
             displayText += "\n";
         }
         enemyWaveText.text = displayText;
+  
     }
+
 
     public void RefreshUI()
     {
@@ -48,3 +51,5 @@ public class UIManager : MonoBehaviour
         UpdateEnemyWaveUI();
     }
 }
+
+*/

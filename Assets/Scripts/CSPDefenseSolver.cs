@@ -1,5 +1,6 @@
 // Implements the CSP solver using Backtracking Search.
 
+/*
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -31,10 +32,12 @@ public class CSPDefenseSolver : MonoBehaviour
     // Coroutine to handle real-time enemy waves
     public GameObject enemyPrefab; // Assign in Unity Inspector
 
+    
     System.Collections.IEnumerator HandleEnemyWaves()
     {
         foreach (var wave in enemyWaves)
         {
+
             yield return new WaitForSeconds(wave.arrivalTime); // Wait for wave arrival
             Debug.Log($"Wave {wave.waveNumber} has arrived!");
 
@@ -110,4 +113,6 @@ public class CSPDefenseSolver : MonoBehaviour
             Debug.Log($"{entry.Value.unitName} assigned to {entry.Key.positionName}");
         }
     }
+
 }
+*/
