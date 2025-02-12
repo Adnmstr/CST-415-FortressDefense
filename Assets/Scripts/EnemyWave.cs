@@ -6,7 +6,8 @@ using UnityEngine;
 [System.Serializable]
 public class EnemyWave
 {
-    public int waveNumber;
+    /*
+     * public int waveNumber;
     public float arrivalTime; // Time in seconds
     public Dictionary<string, PositionType> attackTargets; // e.g., {"Gate 1", PositionType.Gate}
 
@@ -16,4 +17,5 @@ public class EnemyWave
         arrivalTime = time;
         attackTargets = targets;
     }
+    */
 }
