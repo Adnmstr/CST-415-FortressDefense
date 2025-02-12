@@ -1,55 +1,100 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro; // Required for TextMeshPro UI
-/*
+using TMPro;
+
 public class UIManager : MonoBehaviour
 {
-    public TextMeshProUGUI assignmentText; // Assign in Unity Editor
-    public TextMeshProUGUI enemyWaveText; // Assign in Unity Editor
-    private CSPDefenseSolver cspSolver;
+    [Header("UI Elements")]
+    [Tooltip("Text element to display defense assignments.")]
+    public TextMeshProUGUI assignmentText;
 
-    void Start()
+    [Tooltip("Text element to display enemy wave information.")]
+    public TextMeshProUGUI enemyWaveText;
+
+    [Tooltip("Text element to display round info (e.g., round number).")]
+    public TextMeshProUGUI roundInfoText;
+
+    [Header("References")]
+    [Tooltip("Reference to the CSPDefenceSolver (defense manager).")]
+    public CSPDefenceSolver defenceManager;
+
+    [Tooltip("Reference to the WaveManager (attacker manager).")]
+    public WaveManager waveManager;
+
+    [Tooltip("Reference to the RoundManager.")]
+    public RoundManager roundManager;
+
+    /// <summary>
+    /// Call this method to refresh all UI elements. Typically, this is called
+    /// at the end of the planning phase or when a new round begins.
+    /// Pass in the current enemy wave so that its details can be displayed.
+    /// </summary>
+    public void RefreshUI(EnemyWave currentWave)
     {
-        cspSolver = FindObjectOfType<CSPDefenseSolver>();
         UpdateAssignmentUI();
-        UpdateEnemyWaveUI();
+        UpdateEnemyWaveUI(currentWave);
+        UpdateRoundInfoUI();
     }
 
-    public void UpdateAssignmentUI()
+    /// <summary>
+    /// Updates the UI text that displays the defensive assignments.
+    /// </summary>
+    void UpdateAssignmentUI()
     {
         string displayText = "<b>Defense Assignments:</b>\n";
-        foreach (var position in cspSolver.defensivePositions)
+        if (defenceManager != null && defenceManager.defensivePositions != null)
         {
-            string unitName = position.assignedUnit != null ? position.assignedUnit.unitName : "None";
-            displayText += $"{position.positionName}: {unitName}\n";
+            foreach (var pos in defenceManager.defensivePositions)
+            {
+                string unitName = pos.assignedUnit != null ? pos.assignedUnit.unitName : "None";
+                displayText += $"{pos.positionName}: {unitName}\n";
+            }
         }
         assignmentText.text = displayText;
     }
 
-    public void UpdateEnemyWaveUI()
+    /// <summary>
+    /// Updates the UI text that displays enemy wave details.
+    /// </summary>
+    /// <param name="wave">The enemy wave that is about to run.</param>
+    void UpdateEnemyWaveUI(EnemyWave wave)
     {
-        /
-        string displayText = "<b>Enemy Attacks:</b>\n";
-        foreach (var wave in cspSolver.enemyWaves)
+        string displayText = "<b>Enemy Wave Info:</b>\n";
+        if (wave != null && wave.waveEntries != null)
         {
-            displayText += $"Wave {wave.waveNumber} at {wave.arrivalTime} sec:\n";
-            foreach (var target in wave.attackTargets)
+            displayText += $"Wave {wave.waveNumber}:\n";
+            foreach (var entry in wave.waveEntries)
             {
-                displayText += $"{target.Key} ({target.Value})\n";
+                // Try to get a friendly name for the enemy type.
+                string enemyName = "Unknown";
+                if (waveManager != null &&
+                    waveManager.enemyPrefabs != null &&
+                    entry.enemyTypeIndex >= 0 &&
+                    entry.enemyTypeIndex < waveManager.enemyPrefabs.Count)
+                {
+                    enemyName = waveManager.enemyPrefabs[entry.enemyTypeIndex].name;
+                }
+                displayText += $"Lane {entry.spawnLocationIndex}: {entry.enemyCount} x {enemyName}\n";
             }
-            displayText += "\n";
         }
         enemyWaveText.text = displayText;
-  
     }
 
-
-    public void RefreshUI()
+    /// <summary>
+    /// Updates the UI text that displays the current round number.
+    /// Assumes the RoundManager provides a public property (RoundNumber) to access the current round.
+    /// </summary>
+    void UpdateRoundInfoUI()
     {
-        UpdateAssignmentUI();
-        UpdateEnemyWaveUI();
+        string displayText = "<b>Round:</b> ";
+        if (roundManager != null)
+        {
+            displayText += roundManager.RoundNumber.ToString();
+        }
+        else
+        {
+            displayText += "N/A";
+        }
+        roundInfoText.text = displayText;
     }
 }
-
-*/

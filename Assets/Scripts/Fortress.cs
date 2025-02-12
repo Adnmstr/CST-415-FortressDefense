@@ -4,6 +4,7 @@ public class Fortress : MonoBehaviour
 {
     int health = 3;
     bool test = false;
+    public PositionType type;
 
     private void Start()
     {

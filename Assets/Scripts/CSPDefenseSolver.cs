@@ -1,119 +1,108 @@
-// Implements the CSP solver using Backtracking Search.
-
-/*
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CSPDefenseSolver : MonoBehaviour
+public class CSPDefenceSolver : MonoBehaviour
 {
+    [Header("Defensive Setup")]
+    [Tooltip("Pool of available defensive units (e.g., archers, knights, catapults).")]
     public List<DefensiveUnit> availableUnits;
+
+    [Tooltip("List of fortress defensive positions (walls, towers, gates).")]
     public List<DefensivePosition> defensivePositions;
-    public List<EnemyWave> enemyWaves;
-    public GameObject positionObject; // added this so as to fix an error
 
-    private Dictionary<DefensivePosition, DefensiveUnit> assignedUnits = new Dictionary<DefensivePosition, DefensiveUnit>();
-
-   void Start()
-{
-        UIManager uiManager = FindObjectOfType<UIManager>();
-
-    if (SolveCSP(0))
+    /// <summary>
+    /// Plans the defense for the incoming enemy wave.
+    /// Marks which fortress positions are under attack and then uses a CSP assignment
+    /// to allocate available defensive units to those positions.
+    /// </summary>
+    public void PlanDefense(EnemyWave wave)
     {
-        Debug.Log("Defense successfully assigned!");
-        uiManager.UpdateAssignmentUI();
-    }
-    else
-    {
-        Debug.Log("No valid defense assignments found.");
-    }
-
-    StartCoroutine(HandleEnemyWaves()); // Start real-time updates
-}
-
-    // Coroutine to handle real-time enemy waves
-    public GameObject enemyPrefab; // Assign in Unity Inspector
-
-    
-    System.Collections.IEnumerator HandleEnemyWaves()
-    {
-        foreach (var wave in enemyWaves)
+        // Reset all positions.
+        foreach (DefensivePosition pos in defensivePositions)
         {
+            pos.assignedUnit = null;
+            pos.isUnderAttack = false;
+        }
 
-            yield return new WaitForSeconds(wave.arrivalTime); // Wait for wave arrival
-            Debug.Log($"Wave {wave.waveNumber} has arrived!");
-
-            foreach (var target in wave.attackTargets)
+        // For simplicity, assume the enemy wave’s spawn location index corresponds to a defensive position.
+        List<DefensivePosition> positionsUnderAttack = new List<DefensivePosition>();
+        foreach (EnemyWaveEntry entry in wave.waveEntries)
+        {
+            if (entry.spawnLocationIndex >= 0 && entry.spawnLocationIndex < defensivePositions.Count)
             {
-                // Spawn enemy and set target
-                GameObject enemy = Instantiate(enemyPrefab, new Vector3(-10, 0, 0), Quaternion.identity);
-                EnemyAI ai = enemy.GetComponent<EnemyAI>();
-                DefensivePosition targetPosition = defensivePositions.Find(p => p.positionName == target.Key);
-                ai.targetPosition = targetPosition.positionTransform;
-            }
-
-            bool reallocationNeeded = CheckBreaches(wave);
-            if (reallocationNeeded)
-            {
-                Debug.Log("Reallocating defenses due to enemy breach...");
-                SolveCSP(0);
-                FindObjectOfType<UIManager>().UpdateAssignmentUI();
+                DefensivePosition pos = defensivePositions[entry.spawnLocationIndex];
+                pos.isUnderAttack = true;
+                if (!positionsUnderAttack.Contains(pos))
+                    positionsUnderAttack.Add(pos);
             }
         }
-    }
 
-
-    // Simulates checking for breaches
-    bool CheckBreaches(EnemyWave wave)
-{
-    // Example: If a gate is attacked and has no defense, trigger reallocation
-    foreach (var target in wave.attackTargets)
-    {
-        DefensivePosition position = defensivePositions.Find(p => p.positionName == target.Key);
-        if (position.assignedUnit == null)
+        // Use backtracking to assign available units to the positions under attack.
+        if (SolveDefenseCSP(positionsUnderAttack, 0))
         {
-            Debug.Log($"Breach detected at {target.Key}!");
-            return true; // Trigger reallocation
+            Debug.Log("Defense planning succeeded.");
+            // Now instantiate the visual representations.
+            PlaceDefensiveUnits();
         }
+        else
+            Debug.LogWarning("Defense planning failed. Some positions remain undefended.");
     }
-    return false;
-}
 
-
-    bool SolveCSP(int index)
+    /// <summary>
+    /// Recursively assigns available defensive units to the given positions.
+    /// </summary>
+    private bool SolveDefenseCSP(List<DefensivePosition> positions, int index)
     {
-        if (index >= defensivePositions.Count)
-            return true; // All positions assigned
+        if (index >= positions.Count)
+            return true; // All positions assigned.
 
-        DefensivePosition position = defensivePositions[index];
-
-        foreach (var unit in availableUnits)
+        DefensivePosition pos = positions[index];
+        foreach (DefensiveUnit unit in availableUnits)
         {
-            if (position.CanAssignUnit(unit))
+            if (unit.isAvailable && pos.allowedUnits.Contains(unit.type))
             {
-                // Assign unit and mark it unavailable
-                position.assignedUnit = unit;
+                // Tentatively assign the unit.
+                pos.assignedUnit = unit;
                 unit.isAvailable = false;
-                assignedUnits[position] = unit;
 
-                if (SolveCSP(index + 1))
-                    return true; // Continue solving
+                if (SolveDefenseCSP(positions, index + 1))
+                    return true;
 
-                // Backtrack
-                position.assignedUnit = null;
+                // Backtrack.
+                pos.assignedUnit = null;
                 unit.isAvailable = true;
-                assignedUnits.Remove(position);
             }
         }
         return false;
     }
 
-    void DisplayAssignments()
+    /// <summary>
+    /// Instantiates (or moves) the defensive unit prefab to the corresponding defensive position.
+    /// </summary>
+    private void PlaceDefensiveUnits()
     {
-        foreach (var entry in assignedUnits)
+        foreach (DefensivePosition pos in defensivePositions)
         {
-            Debug.Log($"{entry.Value.unitName} assigned to {entry.Key.positionName}");
+            if (pos.assignedUnit != null)
+            {
+                // If we haven't placed a unit yet, or we want to update its position:
+                if (pos.defensiveObject == null && pos.assignedUnit.unitPrefab != null)
+                {
+                    pos.defensiveObject = Instantiate(
+                        pos.assignedUnit.unitPrefab,
+                        pos.positionTransform.position,
+                        pos.positionTransform.rotation
+                    );
+                    // Optionally parent the object so the hierarchy remains organized.
+                    pos.defensiveObject.transform.parent = pos.positionTransform;
+                }
+                else if (pos.defensiveObject != null)
+                {
+                    // Update position/rotation if needed.
+                    pos.defensiveObject.transform.position = pos.positionTransform.position;
+                    pos.defensiveObject.transform.rotation = pos.positionTransform.rotation;
+                }
+            }
         }
     }
-
 }
-*/
