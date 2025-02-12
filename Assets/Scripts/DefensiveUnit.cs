@@ -1,24 +1,30 @@
-// This script defines different unit types.
-
 using UnityEngine;
 
 [System.Serializable]
 public class DefensiveUnit
 {
+    [Tooltip("Name for identification (e.g., 'Archer A').")]
     public string unitName;
+
+    [Tooltip("Type of unit (Archer, Catapult, or Knight).")]
     public UnitType type;
-    public bool isAvailable = true; // Track availability
+
+    [HideInInspector]
+    public bool isAvailable = true;
+
+    [Tooltip("Prefab used to represent this defensive unit in the scene.")]
+    public GameObject unitPrefab;
 
     public DefensiveUnit(string name, UnitType type)
     {
-        unitName = name;
+        this.unitName = name;
         this.type = type;
     }
 }
 
 public enum UnitType
 {
-    Archer,  // Can be placed on Walls and Towers
-    Catapult, // Can be placed on Towers and Gates
-    Knight // Can be placed on Gates
+    Archer,    // For walls (and towers)
+    Catapult,  // For towers (and gates)
+    Knight     // For gates
 }

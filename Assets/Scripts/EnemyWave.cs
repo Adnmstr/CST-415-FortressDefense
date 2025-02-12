@@ -1,21 +1,28 @@
-// Defines enemy waves that the CSP solver must handle.
-
 using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
 public class EnemyWave
 {
-    /*
-     * public int waveNumber;
-    public float arrivalTime; // Time in seconds
-    public Dictionary<string, PositionType> attackTargets; // e.g., {"Gate 1", PositionType.Gate}
+    [Tooltip("Wave number for reference.")]
+    public int waveNumber;
 
-    public EnemyWave(int number, float time, Dictionary<string, PositionType> targets)
-    {
-        waveNumber = number;
-        arrivalTime = time;
-        attackTargets = targets;
-    }
-    */
+    [Tooltip("Arrival time (unused when rounds are externally coordinated).")]
+    public float arrivalTime;
+
+    [Tooltip("List of enemy wave entries that define the wave.")]
+    public List<EnemyWaveEntry> waveEntries;
+}
+
+[System.Serializable]
+public class EnemyWaveEntry
+{
+    [Tooltip("Index into WaveManager.enemyPrefabs.")]
+    public int enemyTypeIndex;
+
+    [Tooltip("Number of enemies of this type to spawn.")]
+    public int enemyCount;
+
+    [Tooltip("Index into WaveManager.spawnLocations (the lane for these enemies).")]
+    public int spawnLocationIndex;
 }
