@@ -128,8 +128,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 101271646}
-  - component: {fileID: 101271644}
-  - component: {fileID: 101271647}
   m_Layer: 8
   m_Name: ArcherTower
   m_TagString: EnemyArcher
@@ -137,19 +135,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &101271644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 101271643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0dd44d52f4de431cb70f3e30795571c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
 --- !u!224 &101271646
 RectTransform:
   m_ObjectHideFlags: 0
@@ -171,26 +156,6 @@ RectTransform:
   m_AnchoredPosition: {x: 242.32, y: 6.16}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &101271647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 101271643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c3fbdc9283814665a9cb9105db6cb8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackRange: 21
-  fireRate: 1
-  arrowPrefab: {fileID: 319177074028967870, guid: d4a53ee3c6db441088cc92ff9b847427, type: 3}
-  firePoint: {fileID: 1152425521}
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 128
-  health: 1
 --- !u!1001 &180052871
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -769,6 +734,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &461424227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461424217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c3fbdc9283814665a9cb9105db6cb8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  attackRange: 21
+  fireRate: 1
+  arrowPrefab: {fileID: 319177074028967870, guid: d4a53ee3c6db441088cc92ff9b847427, type: 3}
+  firePoint: {fileID: 1152425521}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &474728887
 GameObject:
   m_ObjectHideFlags: 0
@@ -1170,6 +1155,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7520341672977643540, guid: b0e8c80702d87fb4f9c231b669dcffd3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 461424223}
+    - targetCorrespondingSourceObject: {fileID: 7520341672977643540, guid: b0e8c80702d87fb4f9c231b669dcffd3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 461424227}
   m_SourcePrefab: {fileID: 100100000, guid: b0e8c80702d87fb4f9c231b669dcffd3, type: 3}
 --- !u!1 &710383429
 GameObject:
@@ -1704,7 +1692,10 @@ PrefabInstance:
     - {fileID: 3462451906931268941, guid: b0e8c80702d87fb4f9c231b669dcffd3, type: 3}
     - {fileID: 5110086601664849342, guid: b0e8c80702d87fb4f9c231b669dcffd3, type: 3}
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7520341672977343540, guid: b0e8c80702d87fb4f9c231b669dcffd3, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 1137132771}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7520341672977643540, guid: b0e8c80702d87fb4f9c231b669dcffd3, type: 3}
       insertIndex: -1
@@ -1865,6 +1856,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1137132770
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1137132771}
+  m_Layer: 7
+  m_Name: Arrow Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1137132771
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137132770}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 3.61, z: 0.5999956}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 256058329}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1152425520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1924,6 +1946,8 @@ MonoBehaviour:
   defenseArcher:
     serializedVersion: 2
     m_Bits: 256
+  arrowPrefab: {fileID: 319177074028967870, guid: d4a53ee3c6db441088cc92ff9b847427, type: 3}
+  firePoint: {fileID: 1137132771}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
