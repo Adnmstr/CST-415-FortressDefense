@@ -60,6 +60,32 @@ public class Arrow : MonoBehaviour
                 Debug.Log("Never took damage");
             }
         }
+        else if (targetLayer == LayerMask.NameToLayer("Knights"))
+        {
+            PlayerHealth knight = target.GetComponent<PlayerHealth>();
+            if (knight != null)
+            {
+                knight.TakeDamage(1); // Apply damage 
+                Debug.Log("Enemy took damage");
+            }
+            else
+            {
+                Debug.Log("Never took damage");
+            }
+        }
+        else if (targetLayer == LayerMask.NameToLayer("DefenseKnight"))
+        {
+            PlayerHealth dknight = target.GetComponent<PlayerHealth>();
+            if (dknight != null)
+            {
+                dknight.TakeDamage(1); // Apply damage 
+                Debug.Log("Enemy took damage");
+            }
+            else
+            {
+                Debug.Log("Never took damage");
+            }
+        }
         else
         {
             Debug.Log("Target is neither an Enemy nor an Archer");
