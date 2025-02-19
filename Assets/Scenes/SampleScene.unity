@@ -1071,14 +1071,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 130987969}
     m_Modifications:
-    - target: {fileID: 2249533074971366800, guid: 351f84b26ef80a94a9c8594ea51801ec, type: 3}
-      propertyPath: m_Name
-      value: castle-wall (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2249533074971366800, guid: 351f84b26ef80a94a9c8594ea51801ec, type: 3}
-      propertyPath: m_TagString
-      value: Wall
-      objectReference: {fileID: 0}
     - target: {fileID: 1594148220298964, guid: 16e0d66d0f670a648aa222a2161a34a0, type: 3}
       propertyPath: m_Name
       value: Road_1 (14)
@@ -1122,6 +1114,14 @@ PrefabInstance:
     - target: {fileID: 4913343313635938, guid: 16e0d66d0f670a648aa222a2161a34a0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2249533074971366800, guid: 351f84b26ef80a94a9c8594ea51801ec, type: 3}
+      propertyPath: m_Name
+      value: castle-wall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2249533074971366800, guid: 351f84b26ef80a94a9c8594ea51801ec, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1675,6 +1675,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4913343313635938, guid: 16e0d66d0f670a648aa222a2161a34a0, type: 3}
   m_PrefabInstance: {fileID: 294818828}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &312801366 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 276984375611902712, guid: ebfc912bd640c44499775fade6bc756a, type: 3}
+  m_PrefabInstance: {fileID: 846211306062778201}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &317367246
 PrefabInstance:
@@ -4167,14 +4172,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1842464504}
     m_Modifications:
-    - target: {fileID: 2249533074971366800, guid: 351f84b26ef80a94a9c8594ea51801ec, type: 3}
-      propertyPath: m_Name
-      value: castle-wall
-      objectReference: {fileID: 0}
-    - target: {fileID: 2249533074971366800, guid: 351f84b26ef80a94a9c8594ea51801ec, type: 3}
-      propertyPath: m_TagString
-      value: Wall
-      objectReference: {fileID: 0}
     - target: {fileID: 1594148220298964, guid: 16e0d66d0f670a648aa222a2161a34a0, type: 3}
       propertyPath: m_Name
       value: Road_1 (33)
@@ -4218,6 +4215,14 @@ PrefabInstance:
     - target: {fileID: 4913343313635938, guid: 16e0d66d0f670a648aa222a2161a34a0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2249533074971366800, guid: 351f84b26ef80a94a9c8594ea51801ec, type: 3}
+      propertyPath: m_Name
+      value: castle-wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 2249533074971366800, guid: 351f84b26ef80a94a9c8594ea51801ec, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5625,9 +5630,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   catapult: {fileID: 3285413397908997534, guid: 691dedf019210bd45bed4de5ecd2307c, type: 3}
-  structure1: {fileID: 0}
-  structure2: {fileID: 0}
-  structure3: {fileID: 0}
+  structure1: {fileID: 1815199815}
+  structure2: {fileID: 312801366}
+  structure3: {fileID: 2047520657}
 --- !u!4 &1034735440
 Transform:
   m_ObjectHideFlags: 0
@@ -11784,6 +11789,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 710383430}
     m_Modifications:
+    - target: {fileID: 6830604891629702448, guid: cc0c497601872d64aa67cc3629517c58, type: 3}
+      propertyPath: positionName
+      value: Wall2
+      objectReference: {fileID: 0}
     - target: {fileID: 2584546397730952120, guid: e5ced279cdf62ab4caf1b1ea47b5ec1e, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -11835,10 +11844,6 @@ PrefabInstance:
     - target: {fileID: 4127212570834266934, guid: e5ced279cdf62ab4caf1b1ea47b5ec1e, type: 3}
       propertyPath: m_TagString
       value: Wall
-      objectReference: {fileID: 0}
-    - target: {fileID: 6830604891629702448, guid: cc0c497601872d64aa67cc3629517c58, type: 3}
-      propertyPath: positionName
-      value: Wall2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
