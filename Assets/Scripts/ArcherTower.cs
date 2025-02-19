@@ -8,6 +8,7 @@ public class ArcherTower : MonoBehaviour
     public GameObject arrowPrefab;
     public Transform firePoint;
     public LayerMask enemyLayer;
+    public LayerMask enemy2Layer;
     
 
     private float nextFireTime = 1f;
@@ -25,7 +26,7 @@ public class ArcherTower : MonoBehaviour
 
     void FindTarget()
     {
-        Collider[] enemies = Physics.OverlapSphere(transform.position, attackRange, enemyLayer);
+        Collider[] enemies = Physics.OverlapSphere(transform.position, attackRange, enemyLayer | enemy2Layer);
         Debug.Log("Enemies in range: " + enemies.Length);
 
         if (enemies.Length > 0)

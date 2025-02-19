@@ -10,6 +10,8 @@ public class EnemyArcher : MonoBehaviour
     public LayerMask defenseArcher;
     public GameObject arrowPrefab;
     public Transform firePoint;
+    public LayerMask defenseKnights;
+
 
     private float nextFireTime = 1f;
     private bool isMoving = true;
@@ -28,7 +30,7 @@ public class EnemyArcher : MonoBehaviour
 
     void FindTarget()
     {
-        Collider[] enemies = Physics.OverlapSphere(transform.position, attackRange, defenseArcher);
+        Collider[] enemies = Physics.OverlapSphere(transform.position, attackRange, defenseArcher | defenseKnights);
         Debug.Log("Defense in range: " + enemies.Length);
 
         if (enemies.Length > 0)
