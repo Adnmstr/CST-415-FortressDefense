@@ -6,13 +6,15 @@ public class Whee : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        transform.localScale = new Vector3((1.0f / 3.0f), (10.0f / 3.0f), (10.0f / 3.0f));
+        transform.Rotate(0, 90, 30);
         StartCoroutine(Fly());
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     IEnumerator Fly()
@@ -21,11 +23,7 @@ public class Whee : MonoBehaviour
         while (count < 10000)
         {
             yield return new WaitForSeconds(0.01f);
-            transform.position = new Vector3(transform.position.x + 0.01f, transform.position.y, transform.position.z);
-            if (count == 0 || count == 100)
-            {
-                Debug.Log(transform.position);
-            }
+            transform.position = new Vector3(transform.position.x, transform.position.y - 0.3f, transform.position.z - 1);
             count++;
         }
         Destroy(gameObject);
