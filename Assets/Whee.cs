@@ -19,12 +19,10 @@ public class Whee : MonoBehaviour
 
     IEnumerator Fly()
     {
-        int count = 0;
-        while (count < 10000)
+        while (transform.position.y > 0)
         {
             yield return new WaitForSeconds(0.01f);
             transform.position = new Vector3(transform.position.x, transform.position.y - 0.3f, transform.position.z - 1);
-            count++;
         }
         Destroy(gameObject);
     }
