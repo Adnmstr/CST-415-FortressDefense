@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
-  attackRange: 21
+  attackRange: 40
   fireRate: 1
   arrowPrefab: {fileID: 319177074028967870, guid: d4a53ee3c6db441088cc92ff9b847427, type: 3}
   firePoint: {fileID: 6450294530527166065}

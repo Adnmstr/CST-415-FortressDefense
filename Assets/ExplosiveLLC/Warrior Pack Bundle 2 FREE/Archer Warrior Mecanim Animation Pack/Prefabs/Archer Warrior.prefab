@@ -248,14 +248,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
-  speed: 2
-  attackRange: 21
+  speed: 1
+  attackRange: 40
   fireRate: 1
   defenseArcher:
     serializedVersion: 2
     m_Bits: 256
   arrowPrefab: {fileID: 319177074028967870, guid: d4a53ee3c6db441088cc92ff9b847427, type: 3}
   firePoint: {fileID: 6514631500702783997}
+  defenseKnights:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!1001 &5110086601655423198
 PrefabInstance:
   m_ObjectHideFlags: 0
