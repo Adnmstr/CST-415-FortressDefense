@@ -5625,9 +5625,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   catapult: {fileID: 3285413397908997534, guid: 691dedf019210bd45bed4de5ecd2307c, type: 3}
-  structure1: {fileID: 0}
-  structure2: {fileID: 0}
-  structure3: {fileID: 0}
+  structure1: {fileID: 1815199815}
+  structure2: {fileID: 1840299245}
+  structure3: {fileID: 2047520657}
 --- !u!4 &1034735440
 Transform:
   m_ObjectHideFlags: 0
@@ -10476,6 +10476,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052ea628581df4988b9da4490f105ee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1840299245 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 276984375611902712, guid: ebfc912bd640c44499775fade6bc756a, type: 3}
+  m_PrefabInstance: {fileID: 1802856657}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1842464503
 GameObject:
   m_ObjectHideFlags: 0
