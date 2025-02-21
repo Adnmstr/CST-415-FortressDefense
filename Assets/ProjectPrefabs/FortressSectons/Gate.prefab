@@ -53,12 +53,16 @@ MonoBehaviour:
   type: 2
   allowedUnits: 0200000001000000
   positionTransform: {fileID: 7833457777068879150}
+  spawnPoints:
+  - {fileID: 7833457777068879150}
+  - {fileID: 4267899684990027310}
   assignedUnit:
-    unitName: 
+    unitName: Knight
     type: 2
     isAvailable: 0
-    unitPrefab: {fileID: 6455139829038195398, guid: 7778632bf67024a46b1f78e3c03c216e, type: 3}
+    unitPrefab: {fileID: 6455139829038195398, guid: e1edabaedba7b46be907f61856305c3a, type: 3}
   isUnderAttack: 0
+  defensiveObject: {fileID: 0}
 --- !u!1 &4383089535072184915
 GameObject:
   m_ObjectHideFlags: 0

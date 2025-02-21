@@ -16,6 +16,9 @@ public class DefensivePosition : MonoBehaviour
     [Tooltip("Transform representing the physical location of this position (an empty GameObject).")]
     public Transform positionTransform;
 
+    [Tooltip("List of spawn points available for this position. Each Transform should be named exactly as required (e.g., 'ArcherPosition').")]
+    public List<Transform> spawnPoints;
+
     [Tooltip("The defensive unit assigned to this position (if any).")]
     public DefensiveUnit assignedUnit;
 
@@ -26,10 +29,10 @@ public class DefensivePosition : MonoBehaviour
     public bool isUnderAttack = false;
 
     /// <summary>
-    /// Once a defensive unit is assigned, its visual representation (if instantiated) is stored here.
+    /// Once defensive units are assigned, their visual representations (if instantiated) are stored here.
     /// </summary>
     [HideInInspector]
-    public GameObject defensiveObject;
+    public List<GameObject> defensiveObjects = new List<GameObject>();
 
     /// <summary>
     /// Checks if the given unit can be assigned to this position.

@@ -83,11 +83,13 @@ MonoBehaviour:
   type: 0
   allowedUnits: 00000000
   positionTransform: {fileID: 4051646098122347538}
+  spawnPoints:
+  - {fileID: 4051646098122347538}
   assignedUnit:
     unitName: 
     type: 0
     isAvailable: 0
-    unitPrefab: {fileID: 0}
+    unitPrefab: {fileID: 7520341672977643540, guid: 18e550164beb4485b91f7b203dd2a878, type: 3}
   isUnderAttack: 0
   defensiveObject: {fileID: 0}
 --- !u!1001 &1011312272995486079
