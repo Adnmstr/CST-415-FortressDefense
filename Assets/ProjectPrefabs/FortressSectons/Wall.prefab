@@ -41,7 +41,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4264987707971690893}
   - component: {fileID: 6830604891629702448}
-  - component: {fileID: 3872248139324420157}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Wall
@@ -91,20 +90,6 @@ MonoBehaviour:
     unitPrefab: {fileID: 0}
   isUnderAttack: 0
   defensiveObject: {fileID: 0}
---- !u!114 &3872248139324420157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2179799684792798994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4f7e4f35abe1494b950807f485e5183, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 3
-  currentHealth: 3
 --- !u!1001 &1011312272995486079
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -157,11 +142,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: castle-wall Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4127212570834266934, guid: e5ced279cdf62ab4caf1b1ea47b5ec1e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4127212570834266934, guid: e5ced279cdf62ab4caf1b1ea47b5ec1e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6818583832752785894}
   m_SourcePrefab: {fileID: 100100000, guid: e5ced279cdf62ab4caf1b1ea47b5ec1e, type: 3}
+--- !u!1 &3985169793815274057 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4127212570834266934, guid: e5ced279cdf62ab4caf1b1ea47b5ec1e, type: 3}
+  m_PrefabInstance: {fileID: 1011312272995486079}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6818583832752785894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3985169793815274057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4f7e4f35abe1494b950807f485e5183, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
+  currentHealth: 3
 --- !u!4 &4325138430650071283 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3606571156622684556, guid: e5ced279cdf62ab4caf1b1ea47b5ec1e, type: 3}
@@ -219,11 +230,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: castle-wall Variant (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4127212570834266934, guid: e5ced279cdf62ab4caf1b1ea47b5ec1e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4127212570834266934, guid: e5ced279cdf62ab4caf1b1ea47b5ec1e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 634425766271744665}
   m_SourcePrefab: {fileID: 100100000, guid: e5ced279cdf62ab4caf1b1ea47b5ec1e, type: 3}
+--- !u!1 &7134832511159918810 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4127212570834266934, guid: e5ced279cdf62ab4caf1b1ea47b5ec1e, type: 3}
+  m_PrefabInstance: {fileID: 6503982546852908012}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &634425766271744665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7134832511159918810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4f7e4f35abe1494b950807f485e5183, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
+  currentHealth: 3
 --- !u!4 &7516460436622424672 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3606571156622684556, guid: e5ced279cdf62ab4caf1b1ea47b5ec1e, type: 3}
@@ -281,13 +318,39 @@ PrefabInstance:
       propertyPath: m_Name
       value: castle-wall Variant (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4127212570834266934, guid: e5ced279cdf62ab4caf1b1ea47b5ec1e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4127212570834266934, guid: e5ced279cdf62ab4caf1b1ea47b5ec1e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8304968959363253031}
   m_SourcePrefab: {fileID: 100100000, guid: e5ced279cdf62ab4caf1b1ea47b5ec1e, type: 3}
 --- !u!4 &6030015739317982377 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3606571156622684556, guid: e5ced279cdf62ab4caf1b1ea47b5ec1e, type: 3}
   m_PrefabInstance: {fileID: 7035737548844049701}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6405591952596684307 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4127212570834266934, guid: e5ced279cdf62ab4caf1b1ea47b5ec1e, type: 3}
+  m_PrefabInstance: {fileID: 7035737548844049701}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8304968959363253031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6405591952596684307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4f7e4f35abe1494b950807f485e5183, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
+  currentHealth: 0
