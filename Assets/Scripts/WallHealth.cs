@@ -17,12 +17,26 @@ public class WallHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            BreakWall();
+            BecomeInvisibleAndBreak();
         }
     }
 
-    void BreakWall()
+    void BecomeInvisibleAndBreak()
     {
+        // Make the wall invisible
+        Renderer renderer = GetComponent<Renderer>();
+        if (renderer != null)
+        {
+            renderer.enabled = false;
+        }
+
+        // Make all child renderers invisible
+        Renderer[] childRenderers = GetComponentsInChildren<Renderer>();
+        foreach (Renderer childRenderer in childRenderers)
+        {
+            childRenderer.enabled = false;
+        }
+
         Debug.Log("Wall has been destroyed!");
         Destroy(gameObject);
     }
