@@ -8,7 +8,7 @@ public class Launch : MonoBehaviour
     public int health = 1;
     private Transform target;
     public LayerMask defenseCatapult;
-    public LayerMask defenseKnights;
+    public LayerMask defenseArcher;
     private float nextFireTime = 1f;
     public float fireRate = 1f;
     public GameObject projectile;
@@ -31,7 +31,7 @@ public class Launch : MonoBehaviour
 
     void FindTarget()
     {
-        Collider[] enemies = Physics.OverlapSphere(transform.position, attackRange, defenseCatapult | defenseKnights);
+        Collider[] enemies = Physics.OverlapSphere(transform.position, attackRange, defenseCatapult | defenseArcher);
         Debug.Log("Defense in range: " + enemies.Length);
 
         if (enemies.Length > 0)
