@@ -8,9 +8,12 @@ public class Catapult : MonoBehaviour
     public Transform structure1;
     public Transform structure2;
     public Transform structure3;
+
+
     private Vector3 structure1pos;
     private Vector3 structure2pos;
     private Vector3 structure3pos;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,9 +25,5 @@ public class Catapult : MonoBehaviour
         Instantiate(catapult, new Vector3(structure3pos.x, structure3pos.y + 12, structure3pos.z), Quaternion.identity, transform);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

@@ -40,27 +40,26 @@ public class Whee : MonoBehaviour
         Debug.Log("Arrow hit target: " + target.name);
 
         int targetLayer = target.gameObject.layer;
-
-        if (targetLayer == LayerMask.NameToLayer("Archer"))
+        if (targetLayer == LayerMask.NameToLayer("Catapult"))
         {
-            EnemyArcher enemy = target.GetComponent<EnemyArcher>();
-            if (enemy != null)
+            Launch catapult = target.GetComponent<Launch>();
+            if (catapult != null)
             {
-                enemy.TakeDamage(1); // Apply damage
-                Debug.Log("Enemy took damage");
+                catapult.TakeDamage(1); // Apply damage
+                Debug.Log("Catapult took damage");
             }
             else
             {
                 Debug.Log("Never took damage");
             }
         }
-        else if (targetLayer == LayerMask.NameToLayer("DefenseArcher"))
+        else if (targetLayer == LayerMask.NameToLayer("DefenseCatapult"))
         {
-            ArcherTower archer = target.GetComponent<ArcherTower>();
-            if (archer != null)
+            DefenseLaunch catapult = target.GetComponent<DefenseLaunch>();
+            if (catapult != null)
             {
-                archer.TakeDamage(1); // Apply damage 
-                Debug.Log("Enemy took damage");
+                catapult.TakeDamage(1); // Apply damage 
+                Debug.Log("Defense Catapult took damage");
             }
             else
             {
@@ -95,7 +94,7 @@ public class Whee : MonoBehaviour
         }
         else
         {
-            Debug.Log("Target is neither an Enemy nor an Archer");
+            Debug.Log("Target is neither an Catapult nor an Knight");
         }
 
         Destroy(gameObject); // Destroy the arrow once it hits the target

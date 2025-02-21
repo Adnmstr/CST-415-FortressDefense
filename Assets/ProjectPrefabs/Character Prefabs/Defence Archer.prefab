@@ -32,15 +32,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7520341672977643540}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.07483971, z: -0, w: 0.9971956}
-  m_LocalPosition: {x: -0.009851208, y: 0, z: -3.999261}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6450294530527166065}
   - {fileID: 5110086601655028280}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 8.584, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5553143249880664351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
-  attackRange: 40
+  attackRange: 60
   fireRate: 1
   arrowPrefab: {fileID: 319177074028967870, guid: d4a53ee3c6db441088cc92ff9b847427, type: 3}
   firePoint: {fileID: 6450294530527166065}

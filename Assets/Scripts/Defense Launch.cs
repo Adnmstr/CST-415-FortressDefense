@@ -2,13 +2,13 @@ using System.Collections;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
-public class Launch : MonoBehaviour
+public class DefenseLaunch : MonoBehaviour
 {
     public float attackRange = 500f;
     public int health = 1;
     private Transform target;
-    public LayerMask defenseCatapult;
-    public LayerMask defenseKnights;
+    public LayerMask catapult;
+    public LayerMask knights;
     private float nextFireTime = 1f;
     public float fireRate = 1f;
     public GameObject projectile;
@@ -31,7 +31,7 @@ public class Launch : MonoBehaviour
 
     void FindTarget()
     {
-        Collider[] enemies = Physics.OverlapSphere(transform.position, attackRange, defenseCatapult | defenseKnights);
+        Collider[] enemies = Physics.OverlapSphere(transform.position, attackRange, catapult | knights);
         Debug.Log("Defense in range: " + enemies.Length);
 
         if (enemies.Length > 0)
@@ -63,7 +63,6 @@ public class Launch : MonoBehaviour
             Debug.Log("no script");
         }
     }
-
 
     public void TakeDamage(int damage)
     {
