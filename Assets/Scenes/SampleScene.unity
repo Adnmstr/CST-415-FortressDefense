@@ -5605,54 +5605,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 763749817}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1034735438
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1034735440}
-  - component: {fileID: 1034735439}
-  m_Layer: 0
-  m_Name: CatapultSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1034735439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1034735438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3008ef6a0e842904fa23fa6ece76d5c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  catapult: {fileID: 3285413397908997534, guid: 691dedf019210bd45bed4de5ecd2307c, type: 3}
-  structure1: {fileID: 1815199815}
-  structure2: {fileID: 1840299245}
-  structure3: {fileID: 2047520657}
---- !u!4 &1034735440
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1034735438}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.18301266, y: -0.6830127, z: -0.18301266, w: 0.6830127}
-  m_LocalPosition: {x: 228.8036, y: 12.77, z: 158.29}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: -30}
 --- !u!1001 &1037557273
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10536,11 +10488,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052ea628581df4988b9da4490f105ee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1840299245 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 276984375611902712, guid: ebfc912bd640c44499775fade6bc756a, type: 3}
-  m_PrefabInstance: {fileID: 1802856657}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1842464503
 GameObject:
   m_ObjectHideFlags: 0
@@ -12112,7 +12059,6 @@ SceneRoots:
   - {fileID: 1111875377}
   - {fileID: 480203163}
   - {fileID: 710383430}
-  - {fileID: 1034735440}
   - {fileID: 664294450}
   - {fileID: 323039031}
   - {fileID: 763749817}
