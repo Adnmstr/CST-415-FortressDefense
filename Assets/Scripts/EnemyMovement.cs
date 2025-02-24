@@ -66,7 +66,7 @@ public class EnemyMovement : MonoBehaviour
             PlayerHealth playerHealth = target.GetComponent<PlayerHealth>();
             if (playerHealth != null)
             {
-                playerHealth.TakeDamage(playerDamage);
+                playerHealth.TakeDamage(playerDamage, gameObject.name);
                 if (playerHealth.health <= 0)
                 {
                     StopAttacking(); // Resume moving after player is destroyed

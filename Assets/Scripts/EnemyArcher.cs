@@ -13,6 +13,7 @@ public class EnemyArcher : MonoBehaviour
     public LayerMask defenseKnights;
 
 
+    private string lastAttacker = "Unknown";
     private float nextFireTime = 1f;
     private bool isMoving = true;
     private Transform target;
@@ -28,7 +29,7 @@ public class EnemyArcher : MonoBehaviour
         }
     }
 
-    void FindTarget()
+    private void FindTarget()
     {
         Collider[] enemies = Physics.OverlapSphere(transform.position, attackRange, defenseArcher | defenseKnights);
         Debug.Log("Defense in range: " + enemies.Length);
@@ -46,7 +47,7 @@ public class EnemyArcher : MonoBehaviour
         }
     }
 
-    void Move()
+    private void Move()
     {
         if (isMoving)
         {
@@ -55,10 +56,11 @@ public class EnemyArcher : MonoBehaviour
         
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, string attacker)
     {
+        lastAttacker = attacker;
         health -= damage;
-        Debug.Log("took damage");
+
         if (health <= 0)
         {
             Die();
@@ -75,7 +77,7 @@ public class EnemyArcher : MonoBehaviour
 
         if (arrowScript != null)
         {
-            arrowScript.SetTarget(target);
+            arrowScript.SetTarget(target, gameObject.name);
         }
         else
         {
@@ -85,8 +87,19 @@ public class EnemyArcher : MonoBehaviour
 
     void Die()
     {
-        Debug.Log(gameObject + "died");
+        Debug.Log(gameObject.name + " died");
+
+        if (BattleLogger.Instance != null)
+        {
+            BattleLogger.Instance.LogKill(lastAttacker, gameObject.name);
+        }
+        else
+        {
+            Debug.LogWarning("BattleLogger not found!");
+        }
+
         Destroy(gameObject);
+
     }
 
     void OnDrawGizmosSelected()

@@ -5,10 +5,12 @@ public class Whee : MonoBehaviour
 {
     public float speed = 20f;
     private Transform target;
+    private string attackerName;
 
-    public void SetTarget(Transform _target)
+    public void SetTarget(Transform _target, string attacker)
     {
         target = _target;
+        attackerName = attacker;
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -45,7 +47,8 @@ public class Whee : MonoBehaviour
             Launch catapult = target.GetComponent<Launch>();
             if (catapult != null)
             {
-                catapult.TakeDamage(1); // Apply damage
+                catapult.TakeDamage(1, attackerName); // Apply damage
+                BattleLogger.Instance.LogKill(gameObject.name, target.name);
                 Debug.Log("Catapult took damage");
             }
             else
@@ -58,7 +61,8 @@ public class Whee : MonoBehaviour
             DefenseLaunch catapult = target.GetComponent<DefenseLaunch>();
             if (catapult != null)
             {
-                catapult.TakeDamage(1); // Apply damage 
+                catapult.TakeDamage(1, attackerName); // Apply damage
+                BattleLogger.Instance.LogKill(gameObject.name, target.name);
                 Debug.Log("Defense Catapult took damage");
             }
             else
@@ -71,7 +75,8 @@ public class Whee : MonoBehaviour
             EnemyArcher archer = target.GetComponent<EnemyArcher>();
             if (archer != null)
             {
-                archer.TakeDamage(1); // Apply damage 
+                archer.TakeDamage(1, attackerName); // Apply damage
+                BattleLogger.Instance.LogKill(gameObject.name, target.name);
                 Debug.Log("Enemy took damage");
             }
             else
@@ -84,7 +89,8 @@ public class Whee : MonoBehaviour
             ArcherTower darcher = target.GetComponent<ArcherTower>();
             if (darcher != null)
             {
-                darcher.TakeDamage(1); // Apply damage 
+                darcher.TakeDamage(1, attackerName); // Apply damage
+                BattleLogger.Instance.LogKill(gameObject.name, target.name);
                 Debug.Log("Enemy took damage");
             }
             else

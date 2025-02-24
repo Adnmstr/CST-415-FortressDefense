@@ -9,6 +9,7 @@ public class Launch : MonoBehaviour
     private Transform target;
     public LayerMask defenseCatapult;
     public LayerMask defenseArcher;
+    private string lastAttacker = "Unknown";
     private float nextFireTime = 1f;
     public float fireRate = 1f;
     public GameObject projectile;
@@ -29,14 +30,15 @@ public class Launch : MonoBehaviour
         }
     }
 
-    void FindTarget()
+    private void FindTarget()
     {
         Collider[] enemies = Physics.OverlapSphere(transform.position, attackRange, defenseCatapult | defenseArcher);
         Debug.Log("Defense in range: " + enemies.Length);
 
         if (enemies.Length > 0)
         {
-            target = enemies[0].transform; // Target the first enemy found
+            int randomIndex = Random.Range(0, enemies.Length);
+            target = enemies[randomIndex].transform; // Target the first enemy found
             Debug.Log("Target Found: " + target.name);
         }
         else
@@ -46,7 +48,7 @@ public class Launch : MonoBehaviour
         }
     }
 
-    void Shoot()
+    private void Shoot()
     {
         if (target == null) return;
         Debug.Log("Shooting at: " + target.name);
@@ -56,7 +58,7 @@ public class Launch : MonoBehaviour
 
         if (projScript != null)
         {
-            projScript.SetTarget(target);
+            projScript.SetTarget(target, gameObject.name);
         }
         else
         {
@@ -65,10 +67,11 @@ public class Launch : MonoBehaviour
     }
 
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, string attacker)
     {
+        lastAttacker = attacker;
         health -= damage;
-        Debug.Log("took damage");
+
         if (health <= 0)
         {
             Die();
@@ -77,6 +80,18 @@ public class Launch : MonoBehaviour
 
     void Die()
     {
+        Debug.Log(gameObject.name + " died");
+
+        if (BattleLogger.Instance != null)
+        {
+            BattleLogger.Instance.LogKill(lastAttacker, gameObject.name);
+        }
+        else
+        {
+            Debug.LogWarning("BattleLogger not found!");
+        }
+
         Destroy(gameObject);
+
     }
 }

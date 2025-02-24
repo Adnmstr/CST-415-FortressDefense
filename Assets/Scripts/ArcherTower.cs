@@ -9,8 +9,8 @@ public class ArcherTower : MonoBehaviour
     public Transform firePoint;
     public LayerMask enemyLayer;
     public LayerMask enemy2Layer;
-    
 
+    private string lastAttacker = "Unknown";
     private float nextFireTime = 1f;
     private Transform target;
 
@@ -51,7 +51,7 @@ public class ArcherTower : MonoBehaviour
 
         if (arrowScript != null)
         {
-            arrowScript.SetTarget(target);
+            arrowScript.SetTarget(target, gameObject.name);
         }
         else
         {
@@ -59,11 +59,14 @@ public class ArcherTower : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, string attacker)
     {
-        health -= damage;
+        lastAttacker = attacker;
 
-        if (health >= 0)
+        health -= damage;
+        Debug.Log(gameObject.name + " took damage from " + attacker);
+
+        if (health <= 0)
         {
             Die();
         }
@@ -71,7 +74,19 @@ public class ArcherTower : MonoBehaviour
 
     void Die()
     {
+        Debug.Log(gameObject.name + " died");
+
+        if (BattleLogger.Instance != null)
+        {
+            BattleLogger.Instance.LogKill(lastAttacker, gameObject.name);
+        }
+        else
+        {
+            Debug.LogWarning("BattleLogger not found!");
+        }
+
         Destroy(gameObject);
+
     }
 
     void OnDrawGizmosSelected()

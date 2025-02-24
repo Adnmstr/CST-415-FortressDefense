@@ -4,11 +4,13 @@ public class Arrow : MonoBehaviour
 {
     public float speed = 20f;
     private Transform target;
+    private string attackerName;
     
 
-    public void SetTarget(Transform _target)
+    public void SetTarget(Transform _target, string attacker)
     {
         target = _target;
+        attackerName = attacker;
     }
 
     void Update()
@@ -39,7 +41,8 @@ public class Arrow : MonoBehaviour
             EnemyArcher enemy = target.GetComponent<EnemyArcher>();
             if (enemy != null)
             {
-                enemy.TakeDamage(1); // Apply damage
+                enemy.TakeDamage(1, attackerName); // Apply damage
+                BattleLogger.Instance.LogKill(gameObject.name, target.name);
                 Debug.Log("Enemy took damage");
             }
             else
@@ -52,7 +55,8 @@ public class Arrow : MonoBehaviour
             ArcherTower archer = target.GetComponent<ArcherTower>();
             if (archer != null)
             {
-                archer.TakeDamage(1); // Apply damage 
+                archer.TakeDamage(1, attackerName); // Apply damage
+                BattleLogger.Instance.LogKill(gameObject.name, target.name);
                 Debug.Log("Enemy took damage");
             }
             else
@@ -65,7 +69,8 @@ public class Arrow : MonoBehaviour
             PlayerHealth knight = target.GetComponent<PlayerHealth>();
             if (knight != null)
             {
-                knight.TakeDamage(1); // Apply damage 
+                knight.TakeDamage(1, attackerName); // Apply damage
+                BattleLogger.Instance.LogKill(gameObject.name, target.name);
                 Debug.Log("Enemy took damage");
             }
             else
@@ -78,7 +83,8 @@ public class Arrow : MonoBehaviour
             PlayerHealth dknight = target.GetComponent<PlayerHealth>();
             if (dknight != null)
             {
-                dknight.TakeDamage(1); // Apply damage 
+                dknight.TakeDamage(1, attackerName); // Apply damage
+                BattleLogger.Instance.LogKill(gameObject.name, target.name);
                 Debug.Log("Enemy took damage");
             }
             else
