@@ -68,6 +68,7 @@ public class DefenseLaunch : MonoBehaviour
 
     public void TakeDamage(int damage, string attacker)
     {
+        Debug.Log(gameObject.name + "Cannot receive damage");
         lastAttacker = attacker;
         health -= damage;
 

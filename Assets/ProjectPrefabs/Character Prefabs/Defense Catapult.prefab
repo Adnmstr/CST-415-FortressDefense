@@ -131,7 +131,7 @@ MonoBehaviour:
   archer:
     serializedVersion: 2
     m_Bits: 128
-  fireRate: 0
+  fireRate: 0.05
   projectile: {fileID: 1021552334082561608, guid: ff9b9a4e7f338084c8cbc8a2661b70f4, type: 3}
 --- !u!1 &3744296925937805943
 GameObject:

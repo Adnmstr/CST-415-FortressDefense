@@ -53,7 +53,7 @@ public class Whee : MonoBehaviour
             }
             else
             {
-                Debug.Log("Never took damage");
+                Debug.Log("Cannon ball Never took damage");
             }
         }
         else if (targetLayer == LayerMask.NameToLayer("DefenseCatapult"))
@@ -67,7 +67,7 @@ public class Whee : MonoBehaviour
             }
             else
             {
-                Debug.Log("Never took damage");
+                Debug.Log("Defense Cannon Ball Never took damage");
             }
         }
         else if (targetLayer == LayerMask.NameToLayer("Archer"))

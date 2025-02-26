@@ -123,15 +123,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d34662aa63c4b0438780ea16af6e947, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRange: 50
+  attackRange: 100
   health: 1
   defenseCatapult:
     serializedVersion: 2
     m_Bits: 4096
   defenseArcher:
     serializedVersion: 2
-    m_Bits: 0
-  fireRate: 1
+    m_Bits: 256
+  fireRate: 0.05
   projectile: {fileID: 1021552334082561608, guid: ff9b9a4e7f338084c8cbc8a2661b70f4, type: 3}
 --- !u!1 &3744296925937805943
 GameObject:

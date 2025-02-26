@@ -48,7 +48,7 @@ public class Launch : MonoBehaviour
         }
     }
 
-    private void Shoot()
+    void Shoot()
     {
         if (target == null) return;
         Debug.Log("Shooting at: " + target.name);
@@ -67,7 +67,7 @@ public class Launch : MonoBehaviour
     }
 
 
-    public void TakeDamage(int damage, string attacker)
+   public void TakeDamage(int damage, string attacker)
     {
         lastAttacker = attacker;
         health -= damage;
